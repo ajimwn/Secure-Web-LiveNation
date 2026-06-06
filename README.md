@@ -61,7 +61,9 @@ Every layer of the application is built with security in mind - from the file up
     │   ├── manage.py               # Django execution script
     │   └── .env                    # Secret environment variables (Ignored by Git)
     ├── .gitignore                  # Git ignore rules
+    ├── requirements.txt            # Project dependencies
     └── README.md                   # Project documentation
+
 
 ---
 
