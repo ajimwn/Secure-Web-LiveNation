@@ -100,5 +100,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR
+
 # Force Django to redirect to our correct profile URL, not the default one
 LOGIN_REDIRECT_URL = '/profile/'

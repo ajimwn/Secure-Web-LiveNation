@@ -4,6 +4,9 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {% for concert in concerts %}
     <div class="bg-[#1e1e1e] p-6 rounded-xl border border-gray-800">
+        {% if concert.poster %}
+        <img src="{{ concert.poster.url }}" alt="{{ concert.title }} poster" class="w-full h-48 object-cover rounded-lg mb-4">
+        {% endif %}
         <h2 class="text-2xl font-bold mb-2">{{ concert.title }}</h2>
         <p class="text-gray-400 mb-4">{{ concert.date }}</p>
         <form method="POST" action="{% url 'book_ticket' concert.id %}">
