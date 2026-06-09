@@ -43,27 +43,44 @@ Every layer of the application is built with security in mind - from the file up
 
 ## 2. Repository Structure
 
-    securetix/
+    SecureTix/
+    ├── docs/
+    │   └── screenshots/            # Application screenshots
+    │       ├── homepage.png
+    │       ├── login.png
+    │       ├── register.png
+    │       ├── concert_detail.png
+    │       ├── profile.png
+    │       └── admin.png
     ├── src/
     │   ├── core/                   # Project settings & routing
-    │   ├── posters/                # Secure media upload directory
-    │   ├── templates/              # HTML Templates
-    │   │   ├── base.html           # Master layout with Tailwind & Nav
-    │   │   ├── index.html          # Concert listing
-    │   │   ├── login.html          # Secure login form
-    │   │   ├── profile.html        # User booking history
-    │   │   └── register.html       # Secure registration form
-    │   ├── tickets/                # Main Application
+    │   │   ├── settings.py         # Environment-based configuration
+    │   │   ├── urls.py             # Root URL dispatcher
+    │   │   ├── asgi.py             # ASGI entry point
+    │   │   └── wsgi.py             # WSGI entry point
+    │   ├── tickets/                # Main application
+    │   │   ├── migrations/         # Database migration files
     │   │   ├── admin.py            # Admin dashboard configuration
-    │   │   ├── models.py           # Database models (Concert, Booking, AuditLog)
-    │   │   ├── urls.py             # URL routing for tickets
-    │   │   └── views.py            # Business logic and security checks
-    │   ├── manage.py               # Django execution script
-    │   └── .env                    # Secret environment variables (Ignored by Git)
+    │   │   ├── apps.py             # App configuration
+    │   │   ├── forms.py            # User registration & edit forms
+    │   │   ├── models.py           # Concert, Booking, AuditLog models
+    │   │   ├── urls.py             # URL routing for tickets app
+    │   │   └── views.py            # Business logic & security checks
+    │   ├── templates/              # HTML templates
+    │   │   ├── base.html           # Master layout with Tailwind & nav
+    │   │   ├── index.html          # Concert listing (homepage)
+    │   │   ├── concert_detail.html # Concert info & booking page
+    │   │   ├── login.html          # Secure login form
+    │   │   ├── register.html       # Secure registration form
+    │   │   ├── profile.html        # User profile & ticket history
+    │   │   └── receipt.html        # Booking receipt
+    │   ├── posters/                # Uploaded concert poster images
+    │   ├── manage.py               # Django management script
+    │   ├── db.sqlite3              # SQLite database (local dev)
+    │   └── .env.example            # Environment variable template
     ├── .gitignore                  # Git ignore rules
-    ├── requirements.txt            # Project dependencies
+    ├── requirements.txt            # Python dependencies
     └── README.md                   # Project documentation
-
 
 ---
 
