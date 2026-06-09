@@ -146,8 +146,20 @@ Navigate to `http://127.0.0.1:8000/` in your browser.
 
 ## 7. Screenshots
 
-> Screenshots below show the live application after running `python manage.py runserver`.
+### Homepage — Upcoming Concerts
+![Homepage](docs/screenshots/homepage.png)
 
-### Example
-![Example Page](docs/screenshots/example.png)
+### Login Page
+![Login](docs/screenshots/login.png)
 
+### Registration Page
+![Register](docs/screenshots/register.png)
+
+### Concert Detail & Booking
+![Concert Detail](docs/screenshots/concert_detail.png)
+
+### User Profile & Ticket History
+![Profile](docs/screenshots/profile.png)
+
+### Admin Dashboard
+![Admin Dashboard](docs/screenshots/admin.png)
